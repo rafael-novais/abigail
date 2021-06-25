@@ -2,10 +2,31 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
         <link rel="stylesheet" href="../css/index.css">
     </head>
-    <h1>
-        registro
-    </h1>
+    <body>
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="../../index.html">Bibs</a>
+            </div>
+        </nav>
+
+        <div class="small-margin ">
+            <h1>Registre-se</h1>
+            <form>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="inputEmailRegister" aria-describedby="emailHelp">
+                  <div id="emailHelp" class="form-text">Seu email será usado pra fazer login</div>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Password</label>
+                  <input type="password" class="form-control" id="inputPasswordRegister">
+                  <div id="passwordHelp" class="form-text">Só não vai me entregar sua senha principal, vacilão</div>
+                </div>
+                <button id="registerUser" type="submit" class="btn btn-primary">Registrar</button>
+            </form>
+        </div>
+        <script type="module" src="../js/index.js"></script>
+    </body>
 </html>
