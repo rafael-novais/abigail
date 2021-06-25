@@ -2,7 +2,7 @@ const userStore = (() => {
 
     let user;
 
-    async function getUserProfile() {
+    function getUserProfile() {
         let headers = new Headers();
         headers.append('content-type', 'application/json');
         headers.append('Authorization', `Bearer ${localStorage.getItem("token")}`)
@@ -12,7 +12,7 @@ const userStore = (() => {
         };
         const prodUrl = "http://ec2-3-142-222-51.us-east-2.compute.amazonaws.com:8085";
         const devUrl = "http://localhost:8085";
-        return await fetch(devUrl + "/clients/" + localStorage.getItem("email"), options)
+        return fetch(devUrl + "/clients/" + localStorage.getItem("email"), options)
         .then(response => response.json())
         .then(json => setUserInfo(json))
         .catch(error => console.log('Authorization failed : ' + error.message));
