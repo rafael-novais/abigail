@@ -6,7 +6,8 @@ export const home = (() => {
     window.onload = async function(){
         await userStore.getUserProfile();
         console.log(userStore.getUser())
+        alert("Bemvindo " + userStore.getUser().name)
         $("#user").textContent = userStore.getUser().name;
     }
-    
+
 })(); 
