@@ -39,7 +39,7 @@ const loginModule = (() => {
         };
         const prodUrl = "http://ec2-3-142-222-51.us-east-2.compute.amazonaws.com:8085";
         const devUrl = "http://localhost:8085";
-        fetch(devUrl + "/auth", options)
+        fetch(prodUrl + "/auth", options)
         .then(response => response.json())
         .then(json => registerDone(json))
         .catch(error => console.log('Authorization failed : ' + error.message));
