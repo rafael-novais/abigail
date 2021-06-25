@@ -4,7 +4,28 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../css/index.css">
     </head>
-    <h1>
-        login
-    </h1>
+    <body>
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="../../index.html">Bibs</a>
+            </div>
+        </nav>
+        <div class="small-margin ">
+            <h1>Login</h1>
+            <form>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="inputEmailLogin" aria-describedby="emailHelp">
+                  <div id="emailHelp" class="form-text">Digite seu email</div>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Senha</label>
+                  <input type="password" class="form-control" id="inputPasswordLogin">
+                  <div id="passwordHelp" class="form-text">Digite sua senha</div>
+                </div>
+                <button id="loginBtn" type="submit" class="btn btn-primary">Entrar</button>
+            </form>
+        </div>
+        <script type="module" src="../js/user/login.js"></script>
+    </body>
 </html>

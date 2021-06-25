@@ -4,8 +4,11 @@ const registerModule = (() => {
     const email = $("#inputEmailRegister");
     const password = $("#inputPasswordRegister");
     
-    $("#registerUser").addEventListener("click", () => registerUser());
-
+    $("#registerUser").addEventListener("click", (event) => {
+        event.preventDefault();
+        registerUser()
+    });
+    
     function registerUser() {
         if(isValidInputs()) {
             saveNewUser(getNewUserObject(name.value, email.value, password.value))
@@ -39,10 +42,16 @@ const registerModule = (() => {
         };
         const prodUrl = "http://ec2-3-142-222-51.us-east-2.compute.amazonaws.com:8085";
         const devUrl = "http://localhost:8085";
-        fetch(prodUrl + "/clients", options)
+        fetch(devUrl + "/clients", options)
         .then(response => response)
-        .then(json => alert("Cadastro concluído! Faça login para continuar"))
+        .then(json => registerDone())
         .catch(error => console.log('Authorization failed : ' + error.message));
+    }
+
+    function registerDone(){
+        name.value = ""; email.value = ""; password.value = "";
+        window.location.href = "/src/pages/login.html";
+        alert("Cadastro concluído! Faça login para continuar")
     }
 })();
 

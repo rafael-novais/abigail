@@ -1,5 +1,6 @@
 import "./commons/utilities.js";
-import registerModule from "./register/register.js";
+import "./user/register.js";
+import  "./user/login.js";
 
 export const indexjs = (() => {
   
