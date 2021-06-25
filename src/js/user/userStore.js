@@ -3,6 +3,7 @@ const userStore = (() => {
     let user;
 
     function getUserProfile() {
+        alert("iniciando busca por user")
         let headers = new Headers();
         headers.append('content-type', 'application/json');
         headers.append('Authorization', `Bearer ${localStorage.getItem("token")}`)
