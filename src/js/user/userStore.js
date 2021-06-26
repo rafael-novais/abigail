@@ -13,9 +13,12 @@ const userStore = (() => {
         };
         const prodUrl = "http://ec2-3-142-222-51.us-east-2.compute.amazonaws.com:8085";
         const devUrl = "http://localhost:8085";
-        return fetch(devUrl + "/clients/" + localStorage.getItem("email"), options)
+        return fetch(prodUrl + "/clients/" + localStorage.getItem("email"), options)
         .then(response => response.json())
-        .then(json => setUserInfo(json))
+        .then(json => {
+            setUserInfo(json);
+            return json;
+        })
         .catch(error => console.log('Authorization failed : ' + error.message));
     }
 
