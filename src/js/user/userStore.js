@@ -3,7 +3,6 @@ const userStore = (() => {
     let user;
 
     function getUserProfile() {
-        alert("iniciando busca por user")
         let headers = new Headers();
         headers.append('content-type', 'application/json');
         headers.append('Authorization', `Bearer ${localStorage.getItem("token")}`)
@@ -17,13 +16,11 @@ const userStore = (() => {
         .then(response => response.json())
         .then(json => {
             setUserInfo(json);
-            return json;
         })
         .catch(error => console.log('Authorization failed : ' + error.message));
     }
 
     function setUserInfo(json) {
-        console.log(json)
         user = json;
     }
 
