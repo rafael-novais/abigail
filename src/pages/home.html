@@ -5,16 +5,60 @@
         <link rel="stylesheet" href="../css/index.css">
     </head>
     <body>
-        <nav class="navbar navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
-              <a class="navbar-brand" href="../../index.html">Bibs</a>
+              <a class="navbar-brand" href="#">Bibs</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../pages/profile.html">Perfil</a>
+                  </li>
+                </ul>
+              </div>
             </div>
-        </nav>
+          </nav>
+          <div class="small-margin ">
+              <h3>Olá, <p id="user"></p></h3>
+          </div>
         <div class="small-margin ">
-            <h1>Home</h1>
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Conta</th>
+                    <th scope="col">Valor</th>
+                    <th scope="col">%</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td >Nubank</td>
+                    <td>$6000</td>
+                    <td>30</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Inter</td>
+                    <td>$4000</td>
+                    <td>20</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td >PETR4</td>
+                    <td>$10000</td>
+                    <td>50</td>
+                  </tr>
+                </tbody>
+              </table>
         </div>
-        <h1>Bem vindo</h1>
-        <h1 id="user"></h1>
+        <div class="small-margin">
+            <p>Tela em construção, dados fictícios :)</p>
+        </div>
+        <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
         <script type="module" src="../js/jspages/home.js"></script>
     </body>
 </html>
